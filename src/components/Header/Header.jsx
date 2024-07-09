@@ -1,12 +1,11 @@
-import React from 'react'
-import './Header.scss'
+import styles from './Header.module.scss'
 import Container from '../Container/Container'
 import Navbar from '../Navbar/Navbar'
 const Header = () => {
     return (
         <Container>
             <Navbar />
-            <div className='header'>Header</div>
+            <div className={styles.header}>Header</div>
         </Container>
     )
 }

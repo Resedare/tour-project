@@ -1,0 +1,75 @@
+@import '../../assets/styles/base/mixins';
+@import '../../assets/styles/base/variables';
+
+.nav {
+    margin-top: 20px;
+
+    &Bar {
+        @include flex-between;
+    }
+
+    &Links {
+        @include flex-center;
+        gap: 30px;
+
+        &Item {
+            font-size: 15px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        &Directions {
+            @include flex-center;
+            gap: 10px;
+            font-weight: 600;
+            width: 186px;
+            background-color: $yellow-color;
+            border: none;
+            position: relative;
+            &Icon {
+                margin-top: 2px;
+            }
+            &:hover {
+            background-color: $yellow-color-hover
+            }
+        }
+
+        &Help {
+            @include flex-center;
+            gap: 10px;
+            width: 186px;
+            border: none;
+
+            &Icon {
+                margin-top: 2px;
+
+            }
+        }
+    }
+
+    &Actions {
+        display: flex;
+        gap: 10px;
+
+        &Item {
+            @include flex-center
+        }
+
+        &Search {
+        }
+
+        &Like {
+        }
+
+        &Login {
+            width: 114px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .nav {
+        padding: 10px;
+    }
+}
