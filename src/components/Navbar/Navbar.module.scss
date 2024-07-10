@@ -26,6 +26,10 @@
             background-color: $yellow-color;
             border: none;
             position: relative;
+            height: 50px;
+            border-radius: 30px;
+            transition: 0.3s;
+            cursor: pointer;
             &Icon {
                 margin-top: 2px;
             }
@@ -34,11 +38,14 @@
             }
         }
 
-        &Help {
+        &Support {
             @include flex-center;
             gap: 10px;
             width: 186px;
             border: none;
+            cursor: pointer;
+            position: relative;
+            height: 50px;
 
             &Icon {
                 margin-top: 2px;

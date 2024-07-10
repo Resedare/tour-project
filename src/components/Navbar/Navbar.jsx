@@ -1,34 +1,41 @@
 import { useState } from 'react';
 import logo from '../../assets/icons/logo.svg';
 import Button from '../Button/Button';
-
 import styles from './Navbar.module.scss';
-import Dropdown from '../Dropdown/Dropdown';
+import Directions from '../Directions/Directions';
+import SupportDropdown from '../SupportDropdown/SupportDropdown';
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isSupportDropdownOpen, setIsSupportDropdownOpen] = useState(false);
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
+    }
+    const toggleSupportDropdown = () => {
+        setIsSupportDropdownOpen(!isSupportDropdownOpen);
     }
     return (
         <nav className={styles.nav}>
             <div className={styles.navBar}>
                 <div className={styles.navLinks}>
                     <img src={logo} alt="Tenloc" />
-                    <Button className={`${styles.navLinksItem} ${styles.navLinksDirections}`} onClick={toggleDropdown}>
+                    <div className={`${styles.navLinksItem} ${styles.navLinksDirections}`} onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
                         Направления
                         <img src="src/assets/icons/arrowDown.svg" alt="" className={styles.navLinksDirectionsIcon} />
                         {isDropdownOpen && (
-                            <Dropdown />
+                            <Directions />
                         )}
-                    </Button>
+                    </div>
 
                     <a href="#" className={styles.navLinksItem}>О сервисе</a>
                     <a href="#" className={styles.navLinksItem}>Блог</a>
-                    <Button href="#" className={`${styles.navLinksItem} ${styles.navLinksHelp}`}>
+                    <div href="#" className={`${styles.navLinksItem} ${styles.navLinksSupport}`} onMouseEnter={toggleSupportDropdown} onMouseLeave={toggleSupportDropdown}>
                         Помощь клиентам
-                        <img src="src/assets/icons/arrowDown.svg" alt="" className={styles.navLinksHelpIcon} />
-                    </Button>
+                        <img src="src/assets/icons/arrowDown.svg" alt="" className={styles.navLinksSupportIcon} />
+                        {isSupportDropdownOpen && (
+                            <SupportDropdown />
+                        )}
+                    </div>
                 </div>
                 <div className={styles.navActions}>
                     <Button className={`${styles.navActionsItem} ${styles.navActionsSearch}`}>
