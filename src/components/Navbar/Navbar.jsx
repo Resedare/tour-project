@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../../assets/icons/logo.svg';
+import logo from '../../assets/icons/logo.png';
 import Button from '../Button/Button';
 import styles from './Navbar.module.scss';
 import Directions from '../Directions/Directions';
@@ -18,7 +18,12 @@ const Navbar = () => {
         <nav className={styles.nav}>
             <div className={styles.navBar}>
                 <div className={styles.navLinks}>
-                    <img src={logo} alt="Tenloc" />
+                    <img src={logo} alt="Tenloc" className={styles.navLogo} />
+                    <Button className={styles.navMenu}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </Button>
                     <div className={`${styles.navLinksItem} ${styles.navLinksDirections}`} onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
                         Направления
                         <img src="src/assets/icons/arrowDown.svg" alt="" className={styles.navLinksDirectionsIcon} />

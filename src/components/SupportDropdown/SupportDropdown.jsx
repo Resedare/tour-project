@@ -11,8 +11,8 @@ const SupportDropdown = () => {
                 <Button className={styles.dropdownLinksTelegram}><img src="src/assets/icons/tg.svg" alt="TG icon" />Telegram</Button>
             </div>
             <div className={styles.dropdownFooter}>
-                <div className={styles.dropdownFooterPhone}><img src="src/assets/icons/phone.svg" alt="" />+7 (495) 123-45-67</div>
-                <div className={styles.dropdownFooterEmail}><img src="src/assets/icons/email.svg" alt="" />hello@trevelme.ru</div>
+                <div className={styles.dropdownFooterPhone}><img src="src/assets/icons/phone.svg" alt="" /><a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
+                <div className={styles.dropdownFooterEmail}><img src="src/assets/icons/email.svg" alt="" /><a href="mailto:hello@example.ru">hello@example.ru</a></div>
             </div>
         </div>
     )

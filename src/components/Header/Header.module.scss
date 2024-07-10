@@ -1,3 +1,76 @@
+@import '../../assets/styles/base/mixins';
+@import '../../assets/styles/base/variables';
+
 .header {
-    font-size: 64px;
+    margin-top: 10px;
+    background-image: url('/src/assets/images/headerIBackground.jpg');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    min-height: 640px;
+    text-align: center;
+    position: relative;
+    &Box {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        @include flex-center;
+        flex-direction: column;
+        max-width: 550px;
+
+    }
+    &Title {
+        font-size: 42px;
+        font-weight: 900;
+    }
+    &Text {
+        margin: 10px 0 30px;
+        font-size: 16px;
+    }
+    &SearchBox {
+        width: 100%;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.16);
+        max-height: 75px;;
+        border-radius: 50px;
+        margin-bottom: 120px;
+        @include flex-between;
+        & > input {
+            width: 60%;
+            height: 50px;
+            border: none;
+            outline: none;
+            padding: 5px;
+            font-size: 18px;
+        }
+        &Find {
+            @include flex-center;
+            gap: 10px;
+            font-weight: 500;
+            width: 134px;
+            background-color: $yellow-color;
+
+            & > img {
+                margin-bottom: 2px;
+            }
+
+        }
+    }
+    &Cities {
+        @include flex-center;
+        gap: 10px;
+        & > a {
+            font-size: 14px;
+            background-color: rgba(117, 117, 117, 0.267);
+            padding: 10px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+        }
+    }
+    
 }

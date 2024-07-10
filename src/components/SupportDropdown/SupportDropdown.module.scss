@@ -45,10 +45,13 @@
     &Footer {
         @include flex-between;
         font-size: 14px;
-
         &Phone, &Email {
             @include flex-center;
             gap: 10px;
+            & > a {
+                text-decoration: none;
+                color: inherit;
+            }
         }
     }
 }
