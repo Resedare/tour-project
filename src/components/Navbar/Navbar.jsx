@@ -1,27 +1,59 @@
-import React from 'react'
-import logo from '../../assets/icons/logo.svg'
-import './Navbar.scss'
-import Button from '../Button/Button'
+import { useState } from 'react';
+import logo from '../../assets/icons/logo.png';
+import Button from '../Button/Button';
+import styles from './Navbar.module.scss';
+import Directions from '../Directions/Directions';
+import SupportDropdown from '../SupportDropdown/SupportDropdown';
 
 const Navbar = () => {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isSupportDropdownOpen, setIsSupportDropdownOpen] = useState(false);
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    }
+    const toggleSupportDropdown = () => {
+        setIsSupportDropdownOpen(!isSupportDropdownOpen);
+    }
     return (
-        <nav className='nav'>
-            <div className='nav-bar'>
-                <div className="nav-links">
-                    <img src={logo} alt="Tenloc" />
-                    <Button className="nav-links-item nav-links-directions">Направления<img src="src/assets/icons/arrowDown.svg" alt="" className='nav-links-directions--icon' /></Button>
-                    <a href="" className="nav-links-item">О сервисе</a>
-                    <a href="" className="nav-links-item">Блог</a>
-                    <Button href="" className="nav-links-item nav-links-help">Помощь клиентам<img src="src/assets/icons/arrowDown.svg" alt="" className='nav-links-help--icon' /></Button>
+        <nav className={styles.nav}>
+            <div className={styles.navBar}>
+                <div className={styles.navLinks}>
+                    <img src={logo} alt="Tenloc" className={styles.navLogo} />
+                    <Button className={styles.navMenu}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </Button>
+                    <div className={`${styles.navLinksItem} ${styles.navLinksDirections}`} onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+                        Направления
+                        <img src="src/assets/icons/arrowDown.svg" alt="" className={styles.navLinksDirectionsIcon} />
+                        {isDropdownOpen && (
+                            <Directions />
+                        )}
+                    </div>
+
+                    <a href="#" className={styles.navLinksItem}>О сервисе</a>
+                    <a href="#" className={styles.navLinksItem}>Блог</a>
+                    <div href="#" className={`${styles.navLinksItem} ${styles.navLinksSupport}`} onMouseEnter={toggleSupportDropdown} onMouseLeave={toggleSupportDropdown}>
+                        Помощь клиентам
+                        <img src="src/assets/icons/arrowDown.svg" alt="" className={styles.navLinksSupportIcon} />
+                        {isSupportDropdownOpen && (
+                            <SupportDropdown />
+                        )}
+                    </div>
                 </div>
-                <div className="nav-actions">
-                    <Button className="nav-actions-item nav-actions-search"><img src="src/assets/icons/search.svg" alt="" /></Button>
-                    <Button className="nav-actions-item nav-actions-like"><img src="src/assets/icons/like.svg" alt="" /></Button>
-                    <Button className="nav-actions-item nav-actions-login">Войти</Button>
+                <div className={styles.navActions}>
+                    <Button className={`${styles.navActionsItem} ${styles.navActionsSearch}`}>
+                        <img src="src/assets/icons/search.svg" alt="" />
+                    </Button>
+                    <Button className={`${styles.navActionsItem} ${styles.navActionsLike}`}>
+                        <img src="src/assets/icons/like.svg" alt="" />
+                    </Button>
+                    <Button className={styles.navActionsLogin}>Войти</Button>
                 </div>
             </div>
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;
