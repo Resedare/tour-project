@@ -53,6 +53,9 @@
             font-weight: 500;
             width: 134px;
             background-color: $yellow-color;
+            &:hover {
+                background-color: $yellow-color-hover;
+            }
 
             & > img {
                 margin-bottom: 2px;
