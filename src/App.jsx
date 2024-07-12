@@ -1,12 +1,15 @@
 import './App.scss'
-import Navbar from './components/Navbar/Navbar'
 import Header from './components/Header/Header'
+import PopularDirections from './components/PopularDirections/PopularDirections'
+import Tours from './components/Tours/Tours'
 
 function App() {
 
   return (
     <>
       <Header />
+      <PopularDirections />
+      <Tours />
     </>
   )
 }

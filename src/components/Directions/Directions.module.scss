@@ -12,6 +12,7 @@
     width: 255px;
     text-align: start;
     cursor: default;
+    z-index: 1;
     &AuthorTours {
         @include flex-between;
 
