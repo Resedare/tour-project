@@ -1,0 +1,74 @@
+{
+    "directions": [
+        {
+            "name": "Экскурсии в Санкт-Петербурге",
+            "city": "Санкт-Петербург",
+            "img": "src/assets/images/itemBg1.jpg",
+            "tours": [
+                {
+                    "name": "Энергия северной Венеции: места силы Санкт-Петербурга",
+                    "description": "Двухчасовая экскурсия по Эрмитажу в мини-группе — история Зимнего дворца и шедевры мастеров Западной Европы.",
+                    "minPrice": "2750",
+                    "img": ""
+                },
+                {
+                    "name": "Царское село: историческое путешествие и красочная экскурсия",
+                    "description": "Двухчасовая экскурсия по Царскому Селу в мини-группе — история Зимнего дворца и шедевры мастеров Западной Европы.",
+                    "minPrice": "2800",
+                    "img": ""
+                }
+            ],
+            "link": "https://vk.com"
+        },
+        {
+            "name": "Экскурсии в Стамбуле",
+            "city": "Стамбул",
+            "img": "src/assets/images/itemBg2.jpg",
+            "tours": [],
+            "link": "https://vk.com"
+        },
+        {
+            "name": "Экскурсии в Дубае",
+            "city": "Дубай",
+            "img": "src/assets/images/itemBg3.jpg",
+            "tours": [],
+            "link": "https://vk.com"
+        },
+        {
+            "name": "Экскурсии в Калининграде",
+            "city": "Калининград",
+            "img": "src/assets/images/itemBg4.jpg",
+            "tours": [],
+            "link": "https://vk.com"
+        },
+        {
+            "name": "Экскурсии в Мурманске",
+            "city": "Мурманск",
+            "img": "src/assets/images/itemBg5.jpg",
+            "tours": [],
+            "link": "https://vk.com"
+        }
+    ],
+    "authorTours": [
+        {
+            "name": "Авторский тур в Дагестан",
+            "link": "https://vk.com"
+        },
+        {
+            "name": "Авторский тур на Камчатку",
+            "link": "https://vk.com"
+        },
+        {
+            "name": "Авторский тур в Мурманск",
+            "link": "https://vk.com"
+        },
+        {
+            "name": "Авторский тур в Стамбул",
+            "link": "https://vk.com"
+        },
+        {
+            "name": "Авторский тур на Байкал",
+            "link": "https://vk.com"
+        }
+    ]
+}

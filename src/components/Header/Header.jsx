@@ -1,7 +1,7 @@
-import Button from '../Button/Button'
-import styles from './Header.module.scss'
-import Container from '../Container/Container'
-import Navbar from '../Navbar/Navbar'
+import Button from '../Button/Button';
+import styles from './Header.module.scss';
+import Container from '../Container/Container';
+import Navbar from '../Navbar/Navbar';
 const Header = () => {
     return (
         <Container>
