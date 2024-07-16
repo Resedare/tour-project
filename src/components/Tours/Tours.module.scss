@@ -39,6 +39,8 @@
         // Карточки
         &List {
             display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
         }
         &Item {
             max-height: 476px;

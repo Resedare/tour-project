@@ -1,7 +1,7 @@
 import Container from '../Container/Container';
 import Button from '../Button/Button';
 import styles from './PopularDirections.module.scss';
-import { useTours } from '../contexts/ToursContext';
+import { useTours } from "../hooks/useTours";
 
 const PopularDirections = () => {
     const { directions } = useTours();

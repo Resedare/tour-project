@@ -1,33 +1,45 @@
 import Container from "../Container/Container";
 import Button from "../Button/Button";
 import styles from './Tours.module.scss';
-import { useTours } from "../contexts/ToursContext";
+import { useTours } from "../hooks/useTours";
+import { useEffect, useState } from "react";
 
 const Tours = () => {
     const { directions } = useTours();
+    const [selectedCity, setSelectedCity] = useState('');
+    const [currentDirection, setCurrentDirection] = useState('');
+
+    const handleChange = (e) => {
+        setSelectedCity(e.target.value)
+    };
+
+    useEffect(() => {
+        const direction = directions.find(element => element.city === selectedCity)
+        setCurrentDirection(direction);
+    }, [selectedCity, directions]);
+
     return (
         <Container className={styles.tours}>
             <div className={styles.toursChoose}>
                 <h2 className={styles.toursChooseTitle}>Экскурсии</h2>
-                <select className={styles.toursChooseCities} placeholder='Выберите город' name='cities'>
-                    <option selected value="" disabled>Выберите город</option>
+                <select className={styles.toursChooseCities} placeholder='Выберите город' name='cities' value={selectedCity} onChange={handleChange}>
+                    <option value="" disabled>Выберите город</option>
                     <option className={styles.toursChooseCity} value="Санкт-Петербург">Санкт-Петербург</option>
-                    <option className={styles.toursChooseCity} value="Санкт-Петербург">Мурманск</option>
-                    <option className={styles.toursChooseCity} value="Санкт-Петербург">Калининград</option>
+                    <option className={styles.toursChooseCity} value="Мурманск">Мурманск</option>
+                    <option className={styles.toursChooseCity} value="Калининград">Калининград</option>
                 </select>
                 <input required className={styles.toursChooseDate} placeholder='Выберите дату' type="text" name="date" id="" onFocus={(e) => e.target.type = 'date'} />
             </div>
             <div className={styles.toursList}>
-                {directions.map((item) => {
+                {currentDirection && currentDirection.tours.map((item) => {
                     return (
-                        <div className={styles.toursItem}>
+                        <div key={item.name} className={styles.toursItem}>
                             <div className={styles.toursItemImage}>
                                 <Button className={styles.toursItemLike}><img src="src/assets/icons/likeWhite.svg" alt="" /></Button>
                             </div>
                             <div className={styles.toursItemMain}>
                                 <div className={styles.toursItemMainInfo}>
-                                    <h3 className={styles.toursItemMainInfoTitle}>Энергия северной Венеции: места
-                                        силы Санкт-Петербурга</h3>
+                                    <h3 className={styles.toursItemMainInfoTitle}>{item.name}</h3>
                                     <p className={styles.toursItemMainInfoDescription}>Двухчасовая экскурсия по Эрмитажу в мини-группе — история Зимнего дворца и шедевры мастеров Западной Европы.</p>
                                     <hr />
                                 </div>
@@ -50,7 +62,6 @@ const Tours = () => {
                         </div>
                     )
                 })}
-
             </div>
         </Container>
     )

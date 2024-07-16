@@ -1,6 +1,6 @@
 import styles from './Directions.module.scss';
 import { useState } from 'react';
-import { useTours } from '../contexts/ToursContext';
+import { useTours } from "../hooks/useTours";
 
 const Directions = () => {
     const { directions, authorTours } = useTours();
