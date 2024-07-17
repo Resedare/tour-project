@@ -47,8 +47,8 @@
             max-width: 334px;
             border-radius: 15px;
             &Image {
-                background-image: url('src/assets/images/toursImg1.jpg');
                 background-repeat: no-repeat;
+                background-size: cover;
                 min-height: 220px;
                 position: relative;
                 border-radius: 15px 15px 0  0;

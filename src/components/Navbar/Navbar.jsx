@@ -18,12 +18,12 @@ const Navbar = () => {
         <nav className={styles.nav}>
             <div className={styles.navBar}>
                 <div className={styles.navLinks}>
-                    <img src={logo} alt="Tenloc" className={styles.navLogo} />
                     <Button className={styles.navMenu}>
                         <span></span>
                         <span></span>
                         <span></span>
                     </Button>
+                    <img src={logo} alt="Tenloc" className={styles.navLogo} />
                     <div className={`${styles.navLinksItem} ${styles.navLinksDirections}`} onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
                         Направления
                         <img src="src/assets/icons/arrowDown.svg" alt="" className={styles.navLinksDirectionsIcon} />

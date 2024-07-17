@@ -34,18 +34,18 @@ const Tours = () => {
                 {currentDirection && currentDirection.tours.map((item) => {
                     return (
                         <div key={item.name} className={styles.toursItem}>
-                            <div className={styles.toursItemImage}>
+                            <div className={styles.toursItemImage} style={{ backgroundImage: `url(${item.img})` }}>
                                 <Button className={styles.toursItemLike}><img src="src/assets/icons/likeWhite.svg" alt="" /></Button>
                             </div>
                             <div className={styles.toursItemMain}>
                                 <div className={styles.toursItemMainInfo}>
                                     <h3 className={styles.toursItemMainInfoTitle}>{item.name}</h3>
-                                    <p className={styles.toursItemMainInfoDescription}>Двухчасовая экскурсия по Эрмитажу в мини-группе — история Зимнего дворца и шедевры мастеров Западной Европы.</p>
+                                    <p className={styles.toursItemMainInfoDescription}>{item.description}</p>
                                     <hr />
                                 </div>
                                 <div className={styles.toursItemMainFooter}>
                                     <div className={styles.toursItemMainFooterLeft}>
-                                        <p className={styles.toursItemMainFooterPrice}><span className={styles.toursItemMainFooterPriceBold}>от 2750 ₽ / </span>с чел</p>
+                                        <p className={styles.toursItemMainFooterPrice}><span className={styles.toursItemMainFooterPriceBold}>от {item.minPrice} ₽ / </span>с чел</p>
                                         <select className={styles.toursItemMainFooterTime}>
                                             <option value="" disabled selected>Выбрать время</option>
                                             <option value="">с 9:00 до 13:00</option>
