@@ -2,7 +2,14 @@
 @import '../../assets/styles/base/variables';
 
 .tours {
-    margin-top: 90px;
+    padding: 90px 0;
+    &Outof {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 90px;
+    }
     &Choose {
         display: flex;
         align-items: center;
@@ -35,7 +42,7 @@
         &Date {
             border-radius: 15px;
         }
-}
+    }
         // Карточки
         &List {
             display: flex;
@@ -124,5 +131,24 @@
                 
             }
             
+    }
+    &All {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        background-color: $yellow-color;
+        border: none;
+        border-radius: 30px;
+        height: 55px;
+        width: 194px;
+        text-decoration: none;
+        color: inherit;
+        font-size: 15px;
+        font-weight: 600;
+
+        &:hover {
+            background-color: $yellow-color-hover;
         }
+    }
 }

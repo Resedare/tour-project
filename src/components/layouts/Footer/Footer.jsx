@@ -1,12 +1,12 @@
-import Button from '../../Button/Button';
-import Container from '../../Container/Container'
+import Button from '@components/Button/Button';
+import Container from '@components/Container/Container'
 import styles from './Footer.module.scss'
-import logo from '../../..//assets/icons/logo.png';
+import logo from '@assets/icons/logo.png';
 
 const Footer = () => {
     return (
-        <Container>
-            <footer className={styles.footer}>
+        <footer className={styles.footer}>
+            <Container>
                 <div className={styles.footerTop}>
                     <div className={styles.footerTopItem}>
                         <img className={styles.footerTopItemLogo} src={logo} alt="" />
@@ -51,11 +51,11 @@ const Footer = () => {
                         <p>&copy; {new Date().getFullYear()} Company</p>
                     </div>
                     <div className={styles.footerBottomPartners}>
-                        <img src="src/assets/icons/payments.png" alt="Payments" />
+                        <img src="../src/assets/icons/payments.png" alt="Payments" />
                     </div>
                 </div>
-            </footer>
-        </Container>
+            </Container>
+        </footer>
     )
 }
 

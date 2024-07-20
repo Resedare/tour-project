@@ -3,7 +3,6 @@
 
 .header {
     margin-top: 10px;
-    background-image: url('/src/assets/images/headerIBackground.jpg');
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,5 +74,21 @@
             color: white;
         }
     }
-    
+    // Для города
+    &City {
+        &Box {
+        padding: 120px;
+        text-align: left;
+        }
+        &Title {
+            font-size: 42px;
+            font-weight: 900;
+            color: white;
+        }
+        &Text {
+            margin: 10px 0 30px;
+            font-size: 16px;
+            color: white;
+        }
+    }
 }

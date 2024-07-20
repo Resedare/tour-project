@@ -1,21 +1,20 @@
 import './App.scss'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ToursProvider } from './components/contexts/ToursContext';
-import Footer from './components/layouts/Footer/Footer';
-import Header from './components/layouts/Header/Header';
-import PopularDirections from './components/PopularDirections/PopularDirections';
-import Tours from './components/Tours/Tours';
+import HomePage from './components/pages/HomePage/HomePage';
+import CityPage from './components/pages/CityPage/CityPage';
 
 function App() {
 
   return (
-    <>
+    <Router>
       <ToursProvider>
-        <Header />
-        <PopularDirections />
-        <Tours />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/:city" element={<CityPage />} />
+        </Routes>
       </ToursProvider>
-      <Footer />
-    </>
+    </Router>
   )
 }
 

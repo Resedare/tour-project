@@ -1,6 +1,7 @@
 import styles from './Directions.module.scss';
 import { useState } from 'react';
-import { useTours } from "../hooks/useTours";
+import { useTours } from '@hooks/useTours';
+import { Link } from 'react-router-dom';
 
 const Directions = () => {
     const { directions, authorTours } = useTours();
@@ -15,7 +16,8 @@ const Directions = () => {
             <ul className={styles.dropdown}>
                 {directions.map((item) => {
                     return (
-                        <li key={item.name}><a href={item.link}>{item.name}</a>
+                        <li key={item.name}>
+                            <Link to={{ pathname: `/${item.city}`, state: { direction: item } }}>{item.name}</Link>
                         </li>
                     )
                 })}
@@ -31,7 +33,7 @@ const Directions = () => {
                         )}
                     </ul>
                 }
-            </ul>
+            </ul >
         </>
     )
 }

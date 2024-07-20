@@ -2,11 +2,13 @@
 @import 'src/assets/styles/base/variables';
 
 .footer {
+    background-color: #FBFBFB;
     &Top {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         padding-bottom: 20px;
+        flex-wrap: wrap;
         &Item {
             display: flex;
             text-align: start;
