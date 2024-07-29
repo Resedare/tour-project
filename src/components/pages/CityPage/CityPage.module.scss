@@ -1,0 +1,30 @@
+@import '@assets/styles/base/mixins';
+@import '@assets/styles/base/variables';
+
+.city {
+    padding: 90px 0;
+
+    &Menu {
+    display: flex;
+    gap: 20px;
+        &Button {
+        width: 160px;
+        height: 51px;
+        border: none;
+        background-color: #F5F5F5;
+            &:hover {
+                background-color: $yellow-color-hover;
+            }
+        }
+        &Title {
+            margin: 90px auto;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 700;
+        }
+    }
+}
+
+.active {
+    background-color: $yellow-color;
+}
