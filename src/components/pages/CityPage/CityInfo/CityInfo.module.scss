@@ -1,2 +1,86 @@
 @import '@assets/styles/base/mixins';
 @import '@assets/styles/base/variables';
+
+.cityInfo {
+    &Tours {
+        &Title {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+        &Description {
+            & > p {
+                font-size: 16px;
+                margin-bottom: 30px;
+                line-height: 26px;
+            }
+        }
+    }
+    &Arrive {
+        @include flex-between;
+        &Block {
+            max-width: 750px;
+            margin-right: 120px;
+        }
+        &Title {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+        &Description {
+            & > p {
+                font-size: 16px;
+                margin-bottom: 30px;
+                line-height: 26px;
+            }
+        }
+    }
+    &Which {
+        padding: 30px 0;
+        &Title {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+        &FromTo {
+            @include flex-between;
+            margin: 30px auto;
+            &Item {
+                padding: 30px;
+                @include flex-between;
+
+                width: 700px;
+                background-color: #F6F6F6;
+                border-radius: 30px;
+                &Block {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    margin-left: 30px;
+                    line-height: 26px;
+                    &Top {
+                        font-size: 22px;
+                        font-weight: 600;
+                    }
+                    &Bottom {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        &Guides {
+            @include flex-between;
+            margin-bottom: 30px;
+            line-height: 26px;
+            &Block {
+                margin-right: 180px;
+                max-width: 500px;
+                &Title {
+                    font-size: 22px;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
