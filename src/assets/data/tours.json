@@ -4,18 +4,19 @@
             "name": "Экскурсии в Санкт-Петербурге",
             "city": "Санкт-Петербург",
             "img": "src/assets/images/itemBg1.jpg",
+            "headerImg": "src/assets/images/spbBg.jpg",
             "tours": [
                 {
                     "name": "Энергия северной Венеции: места силы Санкт-Петербурга",
                     "description": "Двухчасовая экскурсия по Эрмитажу в мини-группе — история Зимнего дворца и шедевры мастеров Западной Европы.",
                     "minPrice": "2750",
-                    "img": ""
+                    "img": "src/assets/images/tours1Img1.jpg"
                 },
                 {
                     "name": "Царское село: историческое путешествие и красочная экскурсия",
                     "description": "Двухчасовая экскурсия по Царскому Селу в мини-группе — история Зимнего дворца и шедевры мастеров Западной Европы.",
                     "minPrice": "2800",
-                    "img": ""
+                    "img": "src/assets/images/tours1Img2.jpg"
                 }
             ],
             "link": "https://vk.com"
@@ -24,6 +25,7 @@
             "name": "Экскурсии в Стамбуле",
             "city": "Стамбул",
             "img": "src/assets/images/itemBg2.jpg",
+            "headerImg": "src/assets/images/stambulBg.jpg",
             "tours": [],
             "link": "https://vk.com"
         },
@@ -31,6 +33,7 @@
             "name": "Экскурсии в Дубае",
             "city": "Дубай",
             "img": "src/assets/images/itemBg3.jpg",
+            "headerImg": "src/assets/images/dubaiBg.jpg",
             "tours": [],
             "link": "https://vk.com"
         },
@@ -38,13 +41,70 @@
             "name": "Экскурсии в Калининграде",
             "city": "Калининград",
             "img": "src/assets/images/itemBg4.jpg",
-            "tours": [],
+            "headerImg": "src/assets/images/kalinBg.jpg",
+            "tours": [
+                {
+                    "name": "Энергия Калининграда",
+                    "description": "Двухчасовая экскурсия по Кёнингсбергскому замку в мини-группе.",
+                    "minPrice": "3000",
+                    "img": "src/assets/images/tours3Img1.jpg"
+                },
+                {
+                    "name": "Энергия Калининграда2",
+                    "description": "Двухчасовая экскурсия по Кёнингсбергскому замку в мини-группе.",
+                    "minPrice": "3000",
+                    "img": "src/assets/images/tours3Img1.jpg"
+                },
+                {
+                    "name": "Энергия Калининграда3",
+                    "description": "Двухчасовая экскурсия по Кёнингсбергскому замку в мини-группе.",
+                    "minPrice": "3000",
+                    "img": "src/assets/images/tours3Img1.jpg"
+                },
+                {
+                    "name": "Энергия Калининграда4",
+                    "description": "Двухчасовая экскурсия по Кёнингсбергскому замку в мини-группе.",
+                    "minPrice": "3000",
+                    "img": "src/assets/images/tours3Img1.jpg"
+                },
+                {
+                    "name": "Энергия Калининграда5",
+                    "description": "Двухчасовая экскурсия по Кёнингсбергскому замку в мини-группе.",
+                    "minPrice": "3000",
+                    "img": "src/assets/images/tours3Img1.jpg"
+                },
+                {
+                    "name": "Энергия Калининграда6",
+                    "description": "Двухчасовая экскурсия по Кёнингсбергскому замку в мини-группе.",
+                    "minPrice": "3000",
+                    "img": "src/assets/images/tours3Img1.jpg"
+                },
+                {
+                    "name": "Энергия Калининграда7",
+                    "description": "Двухчасовая экскурсия по Кёнингсбергскому замку в мини-группе.",
+                    "minPrice": "3000",
+                    "img": "src/assets/images/tours3Img1.jpg"
+                },
+                {
+                    "name": "Энергия Калининграда8",
+                    "description": "Двухчасовая экскурсия по Кёнингсбергскому замку в мини-группе.",
+                    "minPrice": "3000",
+                    "img": "src/assets/images/tours3Img1.jpg"
+                },
+                {
+                    "name": "Энергия Калининграда9",
+                    "description": "Двухчасовая экскурсия по Кёнингсбергскому замку в мини-группе.",
+                    "minPrice": "3000",
+                    "img": "src/assets/images/tours3Img1.jpg"
+                }
+            ],
             "link": "https://vk.com"
         },
         {
             "name": "Экскурсии в Мурманске",
             "city": "Мурманск",
             "img": "src/assets/images/itemBg5.jpg",
+            "headerImg": "src/assets/images/murmanskBg.jpg",
             "tours": [],
             "link": "https://vk.com"
         }

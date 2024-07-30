@@ -1,0 +1,67 @@
+@import 'src/assets/styles/base/mixins';
+@import 'src/assets/styles/base/variables';
+
+.footer {
+    background-color: #FBFBFB;
+    &Top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 20px;
+        flex-wrap: wrap;
+        &Item {
+            display: flex;
+            text-align: start;
+            flex-direction: column;
+            &Logo {
+                max-width: 150px;
+                margin-bottom: 40px;
+            }
+            &Media {
+                margin-top: 20px;
+                @include flex-between;
+                &Btn  {
+                    @include flex-center;
+                    border-radius: 5px;
+                    min-width: 40px;
+                    min-height: 40px;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            &Title {
+                font-size: 16px;
+                font-weight: 700;
+                margin: 30px 0;
+            }
+            &Link {
+                line-height: 35px;
+                text-decoration: none;
+                color: inherit;
+                &:hover {
+                    color: $yellow-color;
+                }
+            }
+            &Phone, &Email, &Address {
+                min-height: 35px;
+                @include flex-start;
+                & > a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+                & > img {
+                    margin-right: 15px;
+                }
+                & > span {
+                    font-weight: 700;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    &Bottom {
+        @include flex-between;
+        padding: 20px 0;
+    }
+}

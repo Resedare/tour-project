@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import toursData from "../../assets/data/tours.json";
+import toursData from "@assets/data/tours.json";
 
 const ToursContext = createContext();
 

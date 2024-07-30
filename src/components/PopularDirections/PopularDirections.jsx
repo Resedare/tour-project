@@ -1,7 +1,8 @@
-import Container from '../Container/Container';
-import Button from '../Button/Button';
+import Container from '@components/Container/Container';
+import Button from '@components/Button/Button';
 import styles from './PopularDirections.module.scss';
-import { useTours } from "../hooks/useTours";
+import { useTours } from "@hooks/useTours";
+import { Link } from 'react-router-dom';
 
 const PopularDirections = () => {
     const { directions } = useTours();
@@ -12,10 +13,11 @@ const PopularDirections = () => {
             <div className={styles.mainDirectionsList}>
                 {directions.map((item) => {
                     return (
-                        <div key={item.city} className={styles.mainDirectionsItem} style={{ backgroundImage: `url(${item.img})` }}>
+                        <Link style={{ backgroundImage: `url(${item.img})` }} className={styles.mainDirectionsItem} key={item.city} to={{ pathname: `/${item.city}`, state: { direction: item } }}>
                             <h3 className={styles.mainDirectionsItemTitle}>{item.name}</h3>
                             <Button className={styles.mainDirectionsItemAmount}>{item.tours.length} экскурсий</Button>
-                        </div>
+                        </Link>
+
                     )
                 })}
 
